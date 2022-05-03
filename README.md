@@ -27,6 +27,30 @@ I have [previously](https://github.com/Kyrylo-Bakumenko/Emotion-Recognition#emot
 ### Dataset
 The I sourced my data from Kaggle[^Dataset]. The dataset was collected from PACS (Picture archiving and communication system) from different hospitals in Dhaka, Bangladesh. It contains the Coronal and Axial images of abdomen and urogram.
 
+For the purposes of the ResNet152 approach I filtered the data to only keep the abdomen images, keeping both those with and without contrast.
+
+![Sample_Kidney][Sample_Kidney]
+
+The frequency of different classes in our data is not uniform and this may lead the model to become biased towords one of the diagnoses, negatively affecting the models training rate and performance.
+
+![Class Distribution][class_distr]
+
+ I take an approack of under-sampling the majority class and over-sampling the minority classes to balance this distribution [^SMOTE]. Specifically I augmented the data by adding in rotated, mirrored, and scaled images from a random crop of the original. In addition to allowing me to balance the ditribution I am able to effectively double the data I have available for training the model.
+
+![Augmented Class Distribution][aug_class_distr]
+
+### The Model (ResNet152)
+
+I am using the ResNet architecture with a layer depth of 152 for my first becnhmark model. In my own implementation I have altered the model to output a last layer of size four to better fit this use case.
+
+To decide which Learning Rate to use for training the model through a Learning Rate Range Test[^LRRT]. From the resulting graph I found that an appropriate learning rate is in the range {10e-5, 10e-3}. I intend to expirement with this range for a cyclical learning rate policy approach, but for this model I kept the learning rate constant: 10e-4.
+
+[Learning Rate Range Test][LRRT]
+
+
+
+
+
 
 
 
@@ -40,3 +64,10 @@ sliding window approach [^SlidingWindow]
 [^Saliency]: https://arxiv.org/pdf/1312.6034.pdf
 [^SlidingWindow]: https://arxiv.org/pdf/1806.03265.pdf
 [^Dataset]: https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone
+[^SMOTE]: https://arxiv.org/abs/1106.1813
+[^LRRT]: https://arxiv.org/pdf/1506.01186.pdf
+
+[Sample_Kidney]: imgs/healthy_kidneys.jpg
+[class_distr]: imgs/data_count.png
+[aug_class_distr]: imgs/augmented_data_count.png
+[LRRT]: imgs/LRRT.png
