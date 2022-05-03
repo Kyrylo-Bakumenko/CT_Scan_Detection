@@ -19,7 +19,7 @@ The ResNet architecture has been demonstrated to be general enough to classify 1
 
 3. Familiarity
 
-I have [previously](https://github.com/Kyrylo-Bakumenko/Emotion-Recognition#emotion-recognition)applied pre-trained ResNet152 models for emotion classification of facial expressions. To expand my understanding of this architecture I wrote an application-specific implementation from scratch for this project.
+I have [previously](https://github.com/Kyrylo-Bakumenko/Emotion-Recognition#emotion-recognition) applied pre-trained ResNet152 models for emotion classification of facial expressions. To expand my understanding of this architecture I wrote an application-specific implementation from scratch for this project.
 
 ## My Approach
 
