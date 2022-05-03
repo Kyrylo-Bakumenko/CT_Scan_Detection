@@ -95,6 +95,7 @@ A similar application for reading CT scans has been implemented in TBI diagnoses
 [^Dataset]: https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone
 [^SMOTE]: https://arxiv.org/abs/1106.1813
 [^LRRT]: https://arxiv.org/pdf/1506.01186.pdf
+[^Layers]: https://arxiv.org/pdf/1803.09820.pdf
 
 [Sample_Kidney]: imgs/healthy_kidneys.jpg
 [class_distr]: imgs/data_count.png
