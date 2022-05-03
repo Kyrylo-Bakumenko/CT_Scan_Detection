@@ -11,7 +11,7 @@ I chose the ResNet architecture as my baseline for evaluating performance for th
 
 One of many challenges when deciding upon the optimal NN for a classification task is depth. Adding layers has the advantage of identifying more complex features as lower level identifications from previous layers are compounded upon. The drawbacks can manifest as vanishing/exploding gradients, saturated accuracy, and overfitting causing deeper models to underperform[^ResNet].
 
-With residual layers a model should not 'forget' what it has learned in previous layers, allowing deeper models to outperform those more shallow up to a point1. I will attempt to identify the optimal model depth by comparing the underfitting/overfitting trade-offs from model depth[^optimal_depth].
+With residual layers a model should not 'forget' what it has learned in previous layers, allowing deeper models to outperform those more shallow up to a point[^ResNet]. I will attempt to identify the optimal model depth by comparing the underfitting/overfitting trade-offs from model depth[^optimal_depth].
 
 2. Proven Feature Detector
 
