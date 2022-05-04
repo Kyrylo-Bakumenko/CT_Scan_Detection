@@ -1,5 +1,5 @@
 # CT-Scan Detection
-This project aims to compare the effectiveness of Residual Networks applied to slices of CT-scans and context-aware Neural Networks (NN's) for differentiating between control, stone, tumor, and cyst CT-scans of kidneys.
+This project aims to compare the effectiveness of residual networks applied to slices of CT-scans and context-aware neural networks (NN's) for differentiating between control, stone, tumor, and cyst CT-scans of kidneys.
 
 ## Problem Statement
 Compare the effectiveness of various NN architectures at predicting kidney anomalies as viewed in CT-scans.
